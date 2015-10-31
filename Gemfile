@@ -19,11 +19,20 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'slim-rails'
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
+gem 'auto_html'
+# gem 'carrierwave'
+
+group :development do
+  gem 'meta_request'
+  gem 'pry-rails'
+  gem 'awesome_print'
+end
 
 group :development, :test do
   gem 'byebug'

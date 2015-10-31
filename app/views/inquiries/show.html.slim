@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong First name:
+  = @inquiry.first_name
+p
+  strong Last name:
+  = @inquiry.last_name
+p
+  strong Reply address:
+  = @inquiry.reply_address
+p
+  strong Subject:
+  = @inquiry.subject
+p
+  strong Message:
+  = @inquiry.message
+
+= link_to 'Edit', edit_inquiry_path(@inquiry)
+'|
+= link_to 'Back', inquiries_path

@@ -14,3 +14,31 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+$(document).ready(function(){
+//     // var windowHeight = $(window).height();
+//     // $(".picturewell").css({'height': windowHeight - 50 });
+    $("#sent").hide();
+    $("#error").hide();
+});
+
+$(function(){
+    $("#new_inquiry").submit(function(){
+        var dataSet = $(this).serialize();
+        $.ajax({
+            type: "POST",
+            url: $(this).attr("action"),
+            data: dataSet,
+            complete: function(){
+                $(".contact_form").fadeOut();
+                $("#sent").fadeIn();
+            },
+            error: function(){
+                $(".contact_form").fadeOut();
+                $("#error").fadeIn();
+            }
+        });
+        return false;
+    });
+})

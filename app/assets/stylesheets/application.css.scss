@@ -82,7 +82,7 @@ body {
   height: 100%;
   z-index: 1;
   position: absolute;
-  background: url("studio_home.jpg") top center no-repeat;
+  background: url("studio_home.jpg") bottom center no-repeat;
   background-size: cover;
   // text-align: center;
   .bgOverlay {
@@ -97,6 +97,7 @@ body {
     background-color: rgba(102, 0, 204, .5);
   }
   .home-header {
+    // border: 1px solid red;
     li {
       margin: 30px 30px;
     }
@@ -112,12 +113,17 @@ body {
   width: 100%;
   margin: 0 !important;
   .logo-main {
-    text-align: center;
+    // border: 1px solid yellow;
+    // height: 100%;
+    width: 33%;
+    margin: 0 auto;
+    // text-align: center;
     // width: 44%;
-    left: 25%;
-    right: 25%;
+    // left: 25%;
+    // right: 25%;
+    // bottom: 15%;
     // margin: 0 auto;
-    position: relative;
+    // position: absolute;
 
     a {
       font-size: 7em;
@@ -128,7 +134,7 @@ body {
       position: absolute;
       width: 33%;
       max-width: 400px;
-      min-width: 300px;
+      min-width: 200px;
       top: 50%;
     }
   }

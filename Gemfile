@@ -26,7 +26,8 @@ gem 'slim-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'auto_html'
-# gem 'carrierwave'
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :development do
   gem 'meta_request'

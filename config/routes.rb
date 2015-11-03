@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
   get 'videos', to: 'videos#index'
-
   get 'sounds', to: 'tracks#index'
 
   resources :inquiries
@@ -14,8 +13,6 @@ Rails.application.routes.draw do
   get 'contact', to: 'inquiries#new'
   get 'studio', to: 'pages#studio'
   get 'gear', to: 'pages#gear'
-  
-  resources :engineers
   
   root 'pages#home'
 

@@ -1,5 +1,5 @@
 h1 heyyyy
-.photo-well
+.fotorama data-transition="crossfade" data-nav="thumbs"
   - @photos.each do |p|
-    .photo
-      = image_tag(p.image_url(:medium))
+    a href="#{p.image_url(:medium)}"
+      img src="#{p.image_url(:thumb)}"

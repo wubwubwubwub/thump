@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require leaflet
+//= require fotorama
 //= require_tree .
 
 
@@ -22,6 +23,7 @@ $(document).ready(function(){
 //     // $(".picturewell").css({'height': windowHeight - 50 });
     $("#sent").hide();
     $("#error").hide();
+    $('.jazztown').bxSlider();
 });
 
 $(function(){

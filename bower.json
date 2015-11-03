@@ -1,0 +1,21 @@
+{
+  "name": "thump",
+  "version": "0.0.1",
+  "homepage": "https://github.com/wubwubwubwub/thump",
+  "authors": [
+    "wubwubwubwub <nolan.camp@gmail.com>"
+  ],
+  "description": "thump recording",
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}

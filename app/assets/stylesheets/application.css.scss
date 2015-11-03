@@ -13,6 +13,11 @@
  *= require_self
  */
 
+@import "leaflet/dist/leaflet";
+@import url("https://fonts.googleapis.com/css?family=Special+Elite");
+@import "pages";
+@import "inquiries";
+
 
 // ---------- CSS Reset ---------- //
 html, body, div, span, applet, object, iframe,
@@ -60,11 +65,6 @@ table {
 }
 // ---------- CSS Reset ---------- //
 
-
-
-
-@import url("https://fonts.googleapis.com/css?family=Special+Elite");
-@import "pages";
 
 
 html {
@@ -157,4 +157,9 @@ footer {
   .links {
     margin: 0 auto;
   }
+}
+
+#marker-title {
+  font-weight: bold;
+  color: red;
 }

@@ -1,5 +1,6 @@
 h1 heyyyy
-.fotorama data-transition="crossfade" data-nav="thumbs"
-  - @photos.each do |p|
-    a href="#{p.image_url(:medium)}"
-      img src="#{p.image_url(:thumb)}"
+.picture-well
+  .fotorama data-transition="crossfade" data-nav="thumbs" data-autoplay="5000" data-transitionduration="1250" data-keyboard="true" data-shuffle="true" data-width="100%" data-ratio="1280/720"
+    - @photos.each do |p|
+      a href="#{p.image_url(:medium)}"
+        img src="#{p.image_url(:thumb)}"

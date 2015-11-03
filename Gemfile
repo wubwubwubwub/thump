@@ -29,8 +29,6 @@ gem 'auto_html'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'soundcloud'
-gem 'fotoramajs'
-
 
 group :development do
   gem 'meta_request'

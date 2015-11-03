@@ -15,7 +15,8 @@
 
 @import "leaflet/dist/leaflet";
 @import url("https://fonts.googleapis.com/css?family=Special+Elite");
-@import url("http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css");
+@import "fotorama/fotorama";
+// @import url("http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css");
 @import "pages";
 @import "inquiries";
 
@@ -163,4 +164,11 @@ footer {
 #marker-title {
   font-weight: bold;
   color: red;
+}
+
+.picture-well {
+  .fotorama {
+    margin: 0 auto;
+    width: 80%;
+  }
 }

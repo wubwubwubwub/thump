@@ -1,2 +1,5 @@
-<h1>Pages#studio</h1>
-<p>Find me in app/views/pages/studio.html.erb</p>
+h1 heyyyy
+.photo-well
+  - @photos.each do |p|
+    .photo
+      = image_tag(p.image_url(:medium))

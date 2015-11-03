@@ -7,6 +7,7 @@ class PagesController < ApplicationController
   end
 
   def studio
+    @photos = GalleryImage.published.all
   end
 
   def gear

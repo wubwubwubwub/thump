@@ -1,0 +1,8 @@
+h1 Videos#index
+
+p Find me in app/views/videos/index.html.slim
+
+.video-list
+- @videos.each do |v|
+  .video
+    = v.source_url_html

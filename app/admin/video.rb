@@ -10,6 +10,7 @@ ActiveAdmin.register Video do
     column :source_url
     column :published
     column :source_url_html
+    actions
   end
 
   

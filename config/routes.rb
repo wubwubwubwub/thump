@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'videos', to: 'videos#index'
+
+  get 'sounds', to: 'tracks#index'
+
   resources :inquiries
   
   devise_for :admin_users, ActiveAdmin::Devise.config

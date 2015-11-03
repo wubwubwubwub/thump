@@ -28,6 +28,7 @@ gem 'devise'
 gem 'auto_html'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'soundcloud'
 
 group :development do
   gem 'meta_request'

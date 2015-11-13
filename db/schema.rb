@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151103154025) do
+ActiveRecord::Schema.define(version: 20151110221539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 20151103154025) do
     t.text     "description"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.string   "image"
+    t.boolean  "published"
   end
 
   create_table "equipment_categories", force: :cascade do |t|
@@ -83,13 +85,12 @@ ActiveRecord::Schema.define(version: 20151103154025) do
   end
 
   create_table "inquiries", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
     t.string   "reply_address"
     t.string   "subject"
     t.text     "message"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.string   "name"
   end
 
   create_table "settings", force: :cascade do |t|
@@ -106,6 +107,7 @@ ActiveRecord::Schema.define(version: 20151103154025) do
     t.datetime "updated_at",     null: false
     t.string   "artist"
     t.boolean  "published"
+    t.text     "description"
   end
 
   create_table "videos", force: :cascade do |t|

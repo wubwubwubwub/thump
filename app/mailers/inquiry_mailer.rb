@@ -3,7 +3,7 @@ class InquiryMailer < ApplicationMailer
 
   def send_inquiry(inquiry)
     @inquiry = inquiry
-    mail(from: "#{inquiry.reply_address}", to: "nolan.camp@gmail.com", subject: "Studio Inquiry From #{inquiry.first_name} #{inquiry.last_name}")
+    mail(from: "#{inquiry.reply_address}", to: "nolan.camp@gmail.com", subject: "Studio Inquiry From #{inquiry.name}")
   end
 
   def send_confirmation(inquiry)

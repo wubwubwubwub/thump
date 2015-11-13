@@ -6,19 +6,14 @@
         - @inquiry.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :first_name
-    = f.text_field :first_name
-  .field
-    = f.label :last_name
-    = f.text_field :last_name
-  .field
-    = f.label :reply_address
-    = f.text_field :reply_address
-  .field
-    = f.label :subject
-    = f.text_field :subject
-  .field
-    = f.label :message
-    = f.text_area :message
-  .actions = f.submit  
+  ul
+    li.field
+      = f.text_field :name, placeholder: "Name*"
+    li.field
+      = f.email_field :reply_address, placeholder: "Email Address*"
+    li.field
+      = f.text_field :subject, placeholder: "Subject*"
+    li.field
+      = f.text_area :message, placeholder: "Message*"
+    li.actions
+      = f.submit "Say Hello", :id => "submit"

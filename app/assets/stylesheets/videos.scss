@@ -1,3 +1,119 @@
 // Place all the styles related to the videos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.videos-intro {
+  color: #b0b0b0;
+  text-align: center;
+  font-size: 3em;
+  padding: 50px 200px 60px;
+}
+
+.video {
+  // margin-bottom: 15px;
+}
+
+.video-list {
+  width: 100%;
+  text-align: center;
+  .centering-container {
+    margin: 0 auto;
+  }
+}
+
+.video-title {
+  margin-top: 15px;
+  text-align: center;
+  // font-size: 1.89em;
+  font-size: 24px;
+  font-weight: bold;
+  color: #b0b0b0;
+}
+
+.video-description {
+  text-align: center;
+  // font-size: 15px;
+  font-size: 1.67em;
+  margin: 15px 0;
+  color: #b0b0b0;
+}
+
+
+// ------------- Media Queries ------------- //
+
+@media only screen and (min-width: 1340px) {
+  .centering-container {
+    width: 1278px;
+    .video-div {
+      width: 624px;
+      height: auto;
+      float: left;
+      
+      iframe {
+        width: 624px;
+        height: 416px;
+      }
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1027px) and (max-width: 1339px) {
+  .centering-container {
+    width: 978px;
+    .video-div {
+      width: 474px;
+      height: auto;
+      float: left;
+
+      iframe {
+        width: 474px;
+        height: 316px;
+      }
+      &:nth-child(odd) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1026px) {
+  .centering-container {
+    margin: 0 auto;
+    width: 98%;
+    .video-div {
+      width: 100%;
+      iframe {
+        width: 100%;
+        // height: auto !important;
+      }
+      .video-description {
+        margin-bottom: 30px;
+      }
+    }
+    
+  }
+
+}
+
+// @media only screen and (max-width: 767px) {
+//   .centering-container {
+//     width: 728px;
+//     .video-div {
+//       width: 474px;
+//       height: auto;
+//       float: left;
+
+//       iframe {
+//         width: 474px;
+//         height: 316px;
+//       }
+//       &:nth-child(odd) {
+//         margin-right: 30px;
+//       }
+//     }
+//   }
+// }

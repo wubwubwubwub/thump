@@ -4,4 +4,104 @@
 
 #map {
   height: 360px;
+  margin: 50px 50px;
+}
+
+.contact {
+  min-height: 400px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+#contact-heading {
+  color: white;
+  font-size: 40px;
+  padding: 40px 0;
+}
+
+#sent, #error {
+  color: white;
+  font-size: 50px;
+}
+
+#contact_form {
+  padding: 10px;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  .field {
+    textarea#inquiry_message {
+      width: 100%;
+      height: 150px;
+    }
+    input#inquiry_subject {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    input#inquiry_name {
+      width: 49%;
+      float: left;
+      margin-bottom: 15px;
+    }
+    input#inquiry_reply_address {
+      width: 49%;
+      float: right;
+      margin-bottom: 15px;
+    }
+    label {
+      font-size: 2em;
+    }
+    input[type="text"], input[type="email"], textarea {
+      margin: 0;
+      font-family: 'Hallo Sans';
+      font-size: 18px;
+      appearance: none;
+      box-shadow: none;
+      border-radius: none;
+      
+      box-sizing: border-box;
+      padding: 10px;
+      border: solid 5px #c9c9c9;
+      box-shadow: inset 0 0 0 1px #707070;
+      transition: box-shadow 0.3s, border 0.3s;
+    }
+    input[type="text"]:focus,
+    input[type="text"].focus,
+    input[type="email"]:focus,
+    input[type="email"].focus,
+    textarea:focus,
+    textarea.focus {
+      outline: none;
+      border: solid 5px #969696;
+    }
+  }
+  input#submit{
+    margin: 15px 0 0;
+    background: #3399cc;
+    width: 50%;
+	  // background: -moz-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	  // background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#25A6E1),color-stop(100%,#188BC0));
+	  // background: -webkit-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	  // background: -o-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	  // background: -ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	  // background: linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	  padding: 8px 13px;
+	  color: #fff;
+	  font-family: 'Hallo Sans',sans-serif;
+	  font-size: 17px;
+	  border-radius: 4px;
+	  -moz-border-radius: 4px;
+	  -webkit-border-radius: 4px;
+	  border:1px solid #1A87B9;
+    transition: all .3s;
+    cursor: pointer;
+
+    &:active {
+      outline: none;
+      background: #246b8f;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
 }

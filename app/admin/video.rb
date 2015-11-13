@@ -12,7 +12,6 @@ ActiveAdmin.register Video do
     column :source_url_html
     actions
   end
-
   
   form do |f|
     f.inputs "Video" do

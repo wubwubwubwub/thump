@@ -13,15 +13,7 @@
  *= require_self
  */
 
-@import "leaflet/dist/leaflet";
-@import url("https://fonts.googleapis.com/css?family=Special+Elite");
-@import "fotorama/fotorama";
-// @import url("http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css");
-@import "pages";
-@import "inquiries";
-
-
-// ---------- CSS Reset ---------- //
+// ---------- * CSS Reset * ---------- //
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -40,7 +32,7 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+	vertical-align: middle;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -65,29 +57,153 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-// ---------- CSS Reset ---------- //
 
 
+// ---------- * Imports * ---------- //
+
+// rails
+@import "pages";
+@import "inquiries";
+@import "videos";
+@import "tracks";
+
+// bower imports
+@import "leaflet/dist/leaflet";
+// @import "fotorama/fotorama"; // ------ missing assets, needs fixing
+@import url("http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css");  //---- works fine
+
+// Fonts
+// @import url("https://fonts.googleapis.com/css?family=Special+Elite");
+// @import url("https://fonts.googleapis.com/css?family=Lato");
+@font-face {
+  font-family: 'Hallo Sans';
+  src:font-url('hallo-sans.otf') format('opentype');
+}
+
+// ----------- * Site CSS * ----------- //
 
 html {
-  font-family: "Special Elite", cursive;
+  font-family: "Hallo Sans", sans-serif;
   font-size: 16px;
-}
-body {
-  font-size: 62.5%; // 1em = 10px
+  // position: relative;
+  padding: 0;
+  margin: 0;
 }
 
-.outerWrapper {
-  min-width: 100%;
-  width: 100%;
-  min-height: 100%;
-  height: 100%;
-  z-index: 1;
-  position: absolute;
-  background: url("studio_home.jpg") bottom center no-repeat;
+body {
+  font-size: 62.5%; // 1em = 10px
+  margin: 0 auto;
+  background: url("header_wood.jpg") top center repeat;
+  // background: url("board.jpg") top center no-repeat;
+  // background: white;
+  background-attachment: fixed;
   background-size: cover;
+  // min-height: 2000px;
+}
+
+
+// ----------- sticky footer bottom of page ----------- // 
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -400px;
+}
+
+footer, .push {
+  height: 400px;
+}
+
+.push {
+  clear: both;
+}
+// ----------- end footer styles ----------- //
+
+
+section {
+  margin-top: 100px;
+}
+
+// .siteContent {
+//   min-height: 1000px;
+//   width: 100%;
+//   margin: 0 auto;
+// }
+// #test ul li a {
+//   vertical-align: middle;
+// }
+
+
+header {
+  height: 90px;
+  background: rgba(#000, .7);
+  z-index: 1;
+  // border: 1px solid #ccc;
+  
+  width: 100%;
+  position: fixed;
+
+  
+  // margin-bottom: 100px;
+  text-align: center;
+  padding: 10px 0 0;
+
+  background-size: fill;
+  top: 0px;
+  // background: radial-gradient(ellipse at 50% 40%, rgba(#000, 1), rgba(#000, 0) 75%);
+  // background: radial-gradient(ellipse, rgba(#000, 1), rgba(#000, 0), .75);
+  .logo {
+    img {
+      width: 150px;
+      // margin: 30px 0 30px;
+    }
+  }
+  ul {
+    // border-top: 1px solid #010101;
+    // border-bottom: 1px solid #010101;2
+    // border-top: 1px solid #b0b0b0;
+    // border-bottom: 1px solid #b0b0b0;
+    list-style-type: none;
+    padding: 0 0;
+
+    li {
+      display: inline;
+      padding: 0 50px;
+      font-size: 2em;
+      // vertical-align: middle;
+      // border-bottom: 1px solid green;
+
+      &:nth-child(1) {
+        border-right: 1px solid #b0b0b0;
+      }
+      &:nth-child(4) {
+        border-right: 1px solid #b0b0b0;
+      }
+      a {
+        // color: #010101;
+        color: #FF5656;
+        text-decoration: none;
+      }
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+.overlayContainer {
+//   // background: url("main_bgr_d.jpg") top center no-repeat;
+//   // background-attachment: fixed; //----- hurts performance - why??
+//   // background-size: cover;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
   // text-align: center;
-  .bgOverlay {
+  .mainBgOverlay {
     width: 100%;
     height: 100%;
     top: 0;
@@ -96,59 +212,23 @@ body {
     left: 0;
     position: absolute;
     z-index: -1;
-    background-color: rgba(102, 0, 204, .5);
-  }
-  .home-header {
-    // border: 1px solid red;
-    li {
-      margin: 30px 30px;
-    }
-    a {
-      font-size: 2em;
-      color: white;
-      text-decoration: none;
-    }
+    // background: linear-gradient(to bottom, rgba(#D1E0E0, .85), rgba(#99CCFF, .15) 90%);
+    background: rgba(#000, .2);
+    background-attachment: fixed;
   }
 }
-
-.innerWrapper {
-  width: 100%;
-  margin: 0 !important;
-  .logo-main {
-    // border: 1px solid yellow;
-    // height: 100%;
-    width: 33%;
-    margin: 0 auto;
-    // text-align: center;
-    // width: 44%;
-    // left: 25%;
-    // right: 25%;
-    // bottom: 15%;
-    // margin: 0 auto;
-    // position: absolute;
-
-    a {
-      font-size: 7em;
-      color: white;
-      text-decoration: none;
-    }
-    img {
-      position: absolute;
-      width: 33%;
-      max-width: 400px;
-      min-width: 200px;
-      top: 50%;
-    }
-  }
-}
-
 
 footer {
+  clear: both;
+  position: relative;
   bottom: 0;
   width: 100%;
-  height: 50px;
-  background: black;
-  text-align: center;
+  background: rgba(#000, .7);
+  margin-top: 100px;
+  img {
+    margin: 90px 0 0 90px;
+    width: 400px;
+  }
   a {
     text-decoration: none;
     color: white;
@@ -167,8 +247,43 @@ footer {
 }
 
 .picture-well {
+  // margin: 30px 0;
   .fotorama {
     margin: 0 auto;
-    width: 80%;
+    // width: 100%;
   }
 }
+
+// // ------------- Media Queries ------------- //
+
+// @media only screen and (min-width: 1340px) {
+//   .siteContent {
+//     width: 1278px;
+//   }
+
+// }
+
+// @media only screen and (min-width: 1027px) and (max-width: 1339px) {
+//   .siteContent {
+//     width: 966px;
+//   }
+// }
+
+// @media only screen and (min-width: 798px) and (max-width: 1026px) {
+//   .siteContent {
+//     width: 738px;
+//   }
+//   header {
+//     ul {
+//       li {
+//         padding: 0 30px;
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 797px) {
+//   .siteContent {
+//     width: 600px;
+//   }
+// }

@@ -7,17 +7,19 @@ head
   = csrf_meta_tags
 
 body
-  header
-    ul
-      li = link_to "Home", root_path
-      li = link_to "The Studio", studio_path 
-      li = link_to "Gear", gear_path
-      li = link_to "Contact Us", contact_path
+  .wrapper
+    header
+      ul
+        li#test = link_to "Studio & Gear", studio_path
+        li = link_to "Sounds", sounds_path
+        span.logo: a href="/": img src="assets/thump_logo_b.png"
+        li = link_to "Videos", videos_path
+        li = link_to "Contact Us", contact_path, 'data-no-turbolink' => true
 
-  section
-    = yield
+    section
+      = yield
+    .push  
+
   footer
-    ul
-      li: a href="https://instagram.com/explore/locations/16319929/" target="_blank" Instagram
-      li: a href="https://www.facebook.com/pages/Thump-Studios/152184821503352" target="_blank" Facebook
-      li = link_to "Connect", contact_path
+    span.logo: a href="/": img src="assets/thump_logo_b.png"
+    

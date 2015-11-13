@@ -19,3 +19,123 @@
 .equip {
   font-size: 2em;
 }
+
+.outerWrapper {
+  min-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  background: url("dinos.jpg") center no-repeat;
+  background-size: cover;
+  text-align: center;
+  .bgOverlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(#EAD4FF, .15);
+  }
+}
+
+.innerWrapper {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  // left: 20%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  padding: 150px 0 80px;
+  margin: 0 auto;
+  .logo-main {
+    // border: 1px solid yellow;
+    text-align: center;
+    width: 33%;
+    margin: 0 auto;
+    a {
+      font-size: 7em;
+      color: white;
+      text-decoration: none;
+    }
+    img {
+      // position: absolute;
+      width: 50%;
+      max-width: 400px;
+      min-width: 200px;
+      // top: 50%;
+    }
+  }
+  .home-nav-links {
+    text-align: center;
+    margin: 15px auto;
+    // border: 1px solid red;
+    li {
+      margin: 30px 30px;
+      display: inline;
+    }
+    a {
+      font-size: 2em;
+      color: #FF5656;
+      text-decoration: none;
+    }
+  }
+}
+
+// .fotorama__nav__frame {
+//   padding-right: 5px !important;
+//   padding-top: 5px !important;
+// }
+
+
+.stool-pic {
+  width: 100%;
+  min-height: 900px;
+  // background: black url("thump_woods.jpg") top left no-repeat;
+  background: url("stool.jpg") top left no-repeat;
+  background-size: cover;
+}
+
+.blurb {
+  background: rgba(#000, .7);
+  // background-size: fit;
+  height: 400px;
+  color: #d0d0d0;
+  text-align: center;
+  #mid {
+    font-size: 36px;
+    padding-top: 150px;
+  }
+}
+
+.gear-list {
+  padding: 20px 15%;
+  min-height: 800px;
+  // background: url("header_wood.jpg") top center no-repeat;
+  color: white;
+  text-align: center;
+  #gear-heading {
+    font-size: 40px;
+    margin: 40px 0;
+  }
+  .gear-category {
+    float: left;
+    margin: 0 25px;
+    .cat-name {
+      text-decoration: underline;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+    .gear-name {
+      font-size: 20px;
+      color: yellow;
+    }
+  }
+}
+
+// .fotorama__nav {
+//   top: -66px;
+// }

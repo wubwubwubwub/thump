@@ -2,3 +2,5 @@
   - @tracks.each do |t|
     .track
       == t.soundcloud_embed
+      .track-artist-and-name = "#{t.artist} - #{t.name}"
+      .track-desc  = t.description

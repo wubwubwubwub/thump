@@ -1,6 +1,6 @@
 ActiveAdmin.register Track do
 
-  permit_params :name, :artist, :soundcloud_url, :published
+  permit_params :name, :artist, :soundcloud_url, :published, :description
 
   index do
     column :artist
@@ -14,6 +14,7 @@ ActiveAdmin.register Track do
     f.inputs "Soundcloud Track" do
       f.input :artist
       f.input :name
+      f.input :description
       f.input :soundcloud_url
       f.input :published
       f.actions
@@ -25,6 +26,7 @@ ActiveAdmin.register Track do
       row :name
       row :artist
       row :published
+      row :description
       row('Soundcloud Track') {|t| raw(t.soundcloud_embed) }
     end
   end

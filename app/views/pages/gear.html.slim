@@ -1,10 +1,7 @@
 .buffer
 .gear
-  - n = 0
-  ul
-    - @categories.each do |c|
-      div class="category-#{n+=1}"
-        li = c.name
-        ul
-          - c.equipment.each do |e|
-            li.equip = e.name
+  .grid
+    - @equipment.each do |gear|
+      .grid-item
+        img src="#{gear.image_url(:isotope)}"
+    

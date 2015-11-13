@@ -1,8 +1,10 @@
-h1 Videos#index
-
-p Find me in app/views/videos/index.html.slim
+.videos-intro
+  p Thump works on this, they work on that Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in erat finibus, cursus nunc et, tincidunt arcu. Duis cursus purus eget metus bibendum eleifend. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Curabitur et rutrum velit.
 
 .video-list
-- @videos.each do |v|
-  .video
-    = v.source_url_html
+  .centering-container
+    - @videos.each do |v|
+      .video-div
+        = v.source_url_html
+        .video-title = v.title
+        .video-description = v.description

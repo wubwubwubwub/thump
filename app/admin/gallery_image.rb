@@ -3,6 +3,7 @@ ActiveAdmin.register GalleryImage do
   permit_params :name, :image, :published
 
   index do
+    selectable_column
     column :name
     column :published
     column :created_at
@@ -29,7 +30,7 @@ ActiveAdmin.register GalleryImage do
       f.input :name
       f.input :image, as: :file, :hint => f.object.image.present? \
                                           ? image_tag(f.object.image.url(:thumb))
-                                          : content_tag(:span, "no cover page yet")
+                                          : content_tag(:span, "No Image Uploaded Yet")
 
       # hint: image_tag(f.object.image.url(:thumb))
       f.input :image_cache, as: :hidden

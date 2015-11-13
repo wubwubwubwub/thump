@@ -4,7 +4,7 @@ html
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type"
   body
     h1 You've received a message from someone on thumprecording.com
-    p= "From: #{@inquiry.first_name} #{@inquiry.last_name}"
+    p= "From: #{@inquiry.name}}"
     p= "Reply Address: #{@inquiry.reply_address}"
     p= "Subject: #{@inquiry.subject}"
     p= "Message: #{@inquiry.message}" 

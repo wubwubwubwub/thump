@@ -1,6 +1,16 @@
-h1 heyyyy
+.stool-pic
+.blurb
+  p#mid Good spot for a blurb. Also could be a blurb floating on the picture above.
 .picture-well
-  .fotorama data-transition="crossfade" data-nav="thumbs" data-autoplay="5000" data-transitionduration="1250" data-keyboard="true" data-shuffle="true" data-width="100%" data-ratio="1280/720"
+  .fotorama data-transition="crossfade" data-nav="thumbs" data-autoplay="true" data-transitionduration="1250" data-keyboard="true" data-shuffle="true" data-width="100%" data-ratio="16/9" data-loop="true" data-arrows="true" data-fit="cover" data-thumbwidth="125px" 
     - @photos.each do |p|
       a href="#{p.image_url(:medium)}"
-        img src="#{p.image_url(:thumb)}"
+        img.foto-thumb src="#{p.image_url(:thumb)}"
+.gear-list
+  #gear-heading That Gear Tho
+  ul
+    - @categories.each do |category|
+      .gear-category
+        .cat-name = category.name
+        - category.equipment.each do |gear|
+           .gear-name = gear.name

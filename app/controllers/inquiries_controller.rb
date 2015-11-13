@@ -20,7 +20,7 @@ class InquiriesController < InheritedResources::Base
   private
 
     def inquiry_params
-      params.require(:inquiry).permit(:first_name, :last_name, :reply_address, :subject, :message)
+      params.require(:inquiry).permit(:name, :reply_address, :subject, :message)
     end
 end
 

@@ -31,6 +31,8 @@ gem 'mini_magick'
 gem 'soundcloud'
 gem 'fog'
 
+gem 'rails_12factor', group: :production
+
 group :development do
   gem 'meta_request'
   gem 'pry-rails'

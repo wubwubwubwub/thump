@@ -26,12 +26,19 @@ $(document).ready(function(){
     // var doc = $(window).height();
     // doc = doc - $("footer").height();
     // $("section").css("min-height", doc);
+
     $("header").find("a").each(function() {
         if ($(this).attr('href').split("/")[1] == window.location.pathname.split("/")[1]) {
-            $(this).addClass("active-page");
+            $(this).addClass("current");
         }
     });
 
+    var current_path = window.location.pathname.split("/")[1].toUpperCase() + " | Thump" ;
+    if (window.location.pathname.split("/")[1] != "")
+        $("title").html(current_path);
+    end
+    
+    
 
 
 

@@ -111,11 +111,11 @@ html, body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -400px;
+  margin: 0 auto -460px;
 }
 
 footer, .push {
-  height: 400px;
+  height: 460px;
 }
 
 .push {
@@ -128,27 +128,15 @@ section {
   margin-top: 100px;
 }
 
-// .siteContent {
-//   min-height: 1000px;
-//   width: 100%;
-//   margin: 0 auto;
-// }
-// #test ul li a {
-//   vertical-align: middle;
-// }
-
 
 header {
   height: 90px;
   background: rgba(#000, .7);
   z-index: 1;
-  // border: 1px solid #ccc;
-  
+
   width: 100%;
   position: fixed;
 
-  
-  // margin-bottom: 100px;
   text-align: center;
   padding: 10px 0 0;
 
@@ -176,21 +164,29 @@ header {
       font-size: 2em;
       // vertical-align: middle;
       // border-bottom: 1px solid green;
-
       &:nth-child(1) {
         border-right: 1px solid #b0b0b0;
       }
       &:nth-child(4) {
         border-right: 1px solid #b0b0b0;
       }
+      &:last-child {
+        border: none;
+      }
       a {
         // color: #010101;
         color: #FF5656;
         text-decoration: none;
+        -webkit-transition: color 1s ease;
+        -moz-transition: color 1s ease;
+        -o-transition: color 1s ease;
+        transition: color 1s ease;
+        &:hover {
+          color: #f0f0f0;
+        }
+
       }
-      &:last-child {
-        border: none;
-      }
+      
     }
   }
 }
@@ -252,6 +248,10 @@ footer {
     margin: 0 auto;
     // width: 100%;
   }
+}
+
+.active-page {
+  color: #f0f0f0;
 }
 
 // // ------------- Media Queries ------------- //

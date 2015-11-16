@@ -77,10 +77,17 @@
       margin: 30px 30px;
       display: inline;
     }
-    a {
-      font-size: 2em;
-      color: #FF5656;
-      text-decoration: none;
+  }
+  a {
+    font-size: 2em;
+    color: #FF5656;
+    text-decoration: none;
+    -webkit-transition: color 1s ease;
+    -moz-transition: color 1s ease;
+    -o-transition: color 1s ease;
+    transition: color 1s ease;
+    &:hover {
+      color: #f0f0f0;
     }
   }
 }

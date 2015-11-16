@@ -1,7 +1,7 @@
 doctype html
 html
 head
-  title Thump
+  title Thump Recording
   = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
   = javascript_include_tag 'application', 'data-turbolinks-track' => true
   = csrf_meta_tags
@@ -21,5 +21,14 @@ body
     .push  
 
   footer
-    span.logo: a href="/": img src="assets/thump_logo_b.png"
+    .footer-img-container
+      ul
+        li: a href="/": img src="assets/thump_logo_b.png"
+        li
+          span 295 Eckford Street - Brooklyn, 11222
+        li
+          span: a href="mailto:nolan@nolancamp.com" Website by Nolan Camp
+    p &#169; Thump Recording, 2015
+
+      
     

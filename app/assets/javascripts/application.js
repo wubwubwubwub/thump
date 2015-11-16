@@ -33,13 +33,7 @@ $(document).ready(function(){
         }
     });
 
-    var current_path = window.location.pathname.split("/")[1].toUpperCase() + " | Thump Recording" ;
-    if (window.location.pathname.split("/")[1] != "")
-        $("title").html(current_path);
-    end
-    
-    
-
-
-
+    if (window.location.pathname.split("/")[1] != "") {
+        $("title").html(window.location.pathname.split("/")[1].toUpperCase() + " | Thump Recording");
+    };
 });

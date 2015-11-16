@@ -33,7 +33,7 @@ $(document).ready(function(){
         }
     });
 
-    var current_path = window.location.pathname.split("/")[1].toUpperCase() + " | Thump" ;
+    var current_path = window.location.pathname.split("/")[1].toUpperCase() + " | Thump Recording" ;
     if (window.location.pathname.split("/")[1] != "")
         $("title").html(current_path);
     end

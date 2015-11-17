@@ -6,11 +6,12 @@
     - @photos.each do |p|
       a href="#{p.image_url(:medium)}"
         img.foto-thumb src="#{p.image_url(:thumb)}"
-.gear-list
+.gear-well
   #gear-heading That Gear Tho
-  ul
-    - @categories.each do |category|
-      .gear-category
-        .cat-name = category.name
-        - category.equipment.each do |gear|
-           .gear-name = gear.name
+  .gear-categories
+    ul
+      - @categories.each do |c|
+        li: a href="#" data-category="#{c.name}" #{c.name}
+        .gear-list data-category="#{c.name}"
+          - c.equipment.each do |e|
+            li = e.name

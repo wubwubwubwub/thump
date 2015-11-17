@@ -36,4 +36,25 @@ $(document).ready(function(){
     if (window.location.pathname.split("/")[1] != "") {
         $("title").html(window.location.pathname.split("/")[1].toUpperCase() + " | Thump Recording");
     };
+
+    // $(".green").hide();
+    // $(".yellow").hide();
+    // $(".red").hide();
+
+    $(".gear-list").hide();
+    
+    $(".gear-categories").find("a").each(function() {
+        $(this).on('click', function() {
+            event.preventDefault();
+            var category = $(this).data('category');
+            $(".gear-categories").find(".gear-list").each(function() {
+                if ($(this).data('category') == category) {
+                    $(this).fadeIn();
+                } else {
+                    $(this).fadeOut();
+                };
+            });
+        });
+    });
+    
 });

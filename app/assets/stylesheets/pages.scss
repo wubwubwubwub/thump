@@ -118,30 +118,43 @@
   }
 }
 
-.gear-list {
+.gear-well {
   padding: 20px 15%;
   min-height: 800px;
   // background: url("header_wood.jpg") top center no-repeat;
   color: white;
   text-align: center;
+  
   #gear-heading {
     font-size: 40px;
     margin: 40px 0;
   }
-  .gear-category {
-    float: left;
-    margin: 0 25px;
-    .cat-name {
-      text-decoration: underline;
-      font-size: 24px;
-      margin-bottom: 5px;
-    }
-    .gear-name {
+}
+
+.gear-categories {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  li {
+    display: block;
+  }
+  a {
+    color: white;
+    font-size: 30px;
+  }
+
+  .gear-list {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    li {
       font-size: 20px;
-      color: yellow;
     }
   }
 }
+
+
 
 // .fotorama__nav {
 //   top: -66px;

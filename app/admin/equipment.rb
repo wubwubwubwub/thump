@@ -2,13 +2,18 @@ ActiveAdmin.register Equipment do
 
   permit_params :name, :equipment_category_id, :description, :image, :published
 
+  action_item only: [:show, :edit] do
+    link_to 'New Equipment', new_admin_equipment_path
+  end
+  
   index do
+    selectable_column
     column :name
     column :published
     column "Image Uploaded?", :sortable => :image do |i|
       content_tag(:span, (i.image? ? "Yes" : "No"), class: "status_tag #{i.image? ? "yes" : "no"}")
     end
-    column :description
+    # column :description
     actions
   end
 

@@ -93,8 +93,11 @@ html {
 body {
   font-size: 62.5%; // 1em = 10px
   margin: 0 auto;
-  background: url("header_wood.jpg") top center repeat;
+  // background: url("header_wood.jpg") top center repeat;
   // background: url("board.jpg") top center no-repeat;
+  // background: url("home_bgr.jpg") top center no-repeat;
+  background: url("main_bgr_c.jpg") top center no-repeat;
+  // background: url("main_bgr_b.jpg") top center no-repeat;
   // background: white;
   background-attachment: fixed;
   background-size: cover;

@@ -3,15 +3,42 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #map {
-  height: 360px;
-  margin: 50px 50px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  // margin: 50px 50px;
 }
 
-.contact {
-  min-height: 400px;
-  padding-top: 30px;
+.contact-well {
+  height: 800px;
+  max-width: 1220px;
+  position: relative;
   text-align: center;
+  padding: 0 10%;
+  .map-box {
+    float: left;
+    width: 49%;
+    max-width: 600px;
+    height: 350px;
+    // border: 1px solid yellow;
+  }
+  
+  .contact {
+    float: right;
+    // border: 1px solid red;
+    // min-height: 400px;
+    width: 49%;
+    // padding-top: 30px;
+    // text-align: center;
+    height: 400px;
+    max-width: 600px;
+  }
 }
+
+.map-box {
+  // clear: both;
+}
+
 
 #contact-heading {
   color: white;
@@ -25,9 +52,9 @@
 }
 
 #contact_form {
-  padding: 10px;
-  margin: 0 auto;
-  width: 50%;
+  // padding: 10px;
+  // margin: 0 auto;
+  // width: 50%;
   text-align: center;
   .field {
     textarea#inquiry_message {
@@ -104,4 +131,8 @@
       outline: none;
     }
   }
+}
+
+#marker-title {
+  font-weight: bold;
 }

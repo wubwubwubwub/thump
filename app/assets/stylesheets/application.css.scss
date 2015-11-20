@@ -137,7 +137,7 @@ section {
 header {
   height: 76px;
   background: rgba(#000, .7);
-  z-index: 1;
+  z-index: 1001;
 
   width: 100%;
   position: fixed;
@@ -145,7 +145,6 @@ header {
   text-align: center;
   padding: 8px 0 0;
 
-  background-size: fill;
   top: 0px;
   // background: radial-gradient(ellipse at 50% 40%, rgba(#000, 1), rgba(#000, 0) 75%);
   // background: radial-gradient(ellipse, rgba(#000, 1), rgba(#000, 0), .75);
@@ -224,10 +223,11 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(to top, rgba(#4E4E4E, .7) 10%, rgba(#000, .7));
+  background: linear-gradient(to top, rgba(#4E4E4E, .7) 7%, rgba(#000, .8));
   margin-top: 100px;
   padding-top: 30px;
   text-align: center;
+  box-shadow: 0px -11px 100px rgba(152, 127, 72, 0.5);
   p {
     text-align: center;
     margin: 0 auto;
@@ -276,20 +276,6 @@ footer {
         border: none;
       }
     }
-  }
-}
-
- 
-#marker-title {
-  font-weight: bold;
-  color: red;
-}
-
-.picture-well {
-  // margin: 30px 0;
-  .fotorama {
-    margin: 0 auto;
-    // width: 100%;
   }
 }
 

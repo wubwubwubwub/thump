@@ -79,7 +79,7 @@
     }
   }
   a {
-    font-size: 2em;
+    font-size: 2.2em;
     color: #FF5656;
     text-decoration: none;
     -webkit-transition: color 1s ease;
@@ -97,37 +97,50 @@
 //   padding-top: 5px !important;
 // }
 
-
 .stool-pic {
   width: 100%;
-  min-height: 900px;
+  min-height: 800px;
   // background: black url("thump_woods.jpg") top left no-repeat;
   background: url("stool.jpg") top left no-repeat;
   background-size: cover;
+  z-index: -99999;
 }
 
+.picture-well {
+  margin: 0;
+  padding: 40px 5%;
+  // background: rgba(#000, .7);
+  .fotorama {
+    margin: 0 auto;
+    // width: 100%;
+  }
+}
+
+
 .blurb {
-  background: rgba(#000, .7);
+  // display: none;
+  margin: -200px 0 130px;
+  background: rgba(#000, .8);
   // background-size: fit;
-  height: 400px;
+  height: 120px;
   color: #d0d0d0;
   text-align: center;
   #mid {
     font-size: 36px;
-    padding-top: 150px;
+    padding-top: 40px;
   }
 }
 
 .gear-well {
-  padding: 20px 0;
+  margin:  0 0;
   min-height: 800px;
   // background: url("header_wood.jpg") top center no-repeat;
   color: white;
   text-align: center;
   
   #gear-heading {
-    font-size: 40px;
-    margin: 40px 0;
+    font-size: 80px;
+    margin: 0px 0 50px;
   }
 }
 
@@ -162,7 +175,7 @@
   }
   .gear-container {
     border: 1px solid black;
-    z-index: -1;
+    z-index: 0;
     background: rgba(#000, .5);    
     position: absolute;
     height: 707px;
@@ -196,6 +209,7 @@
     color: #d0d0d0;
     padding: 16px 0 40px 12px;
     box-sizing: border-box;
+    z-index: 1;
     .gear-list-name {
       font-size: 30px;
       color: #ff5656;

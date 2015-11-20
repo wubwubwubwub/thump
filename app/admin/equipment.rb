@@ -5,6 +5,15 @@ ActiveAdmin.register Equipment do
   action_item only: [:show, :edit] do
     link_to 'New Equipment', new_admin_equipment_path
   end
+
+  scope :all
+  scope :microphones
+  scope :outboard_pres
+  scope :effects_pedals
+  scope :keys
+  scope :EQ
+  scope :amps
+  scope :drums
   
   index do
     selectable_column

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require featherlight
 //= require leaflet
 //= require fotorama
 //= require_tree .
@@ -40,12 +41,22 @@ $(document).ready(function(){
     // $(".green").hide();
     // $(".yellow").hide();
     // $(".red").hide();
+    // $(".gear-list").find("a").filter(".gear-photo-link").each(functioin() {
+    //     $(this).on('click', function() {
+    //         event.preventDefault();
+    //     });
+    // });
 
+    
     $(".gear-list").hide();
     
-    $(".gear-categories").find("a").each(function() {
+    $(".gear-categories").find("a").filter(".link").each(function() {
         $(this).on('click', function() {
             event.preventDefault();
+            $(".welcome-container").fadeOut();
+            $(".gear-categories").find(".link").css("color", "#d0d0d0");
+            $(this).css("color", "#ff5656");
+            
             var category = $(this).data('category');
             $(".gear-categories").find(".gear-list").each(function() {
                 if ($(this).data('category') == category) {
@@ -55,6 +66,13 @@ $(document).ready(function(){
                 };
             });
         });
+    });
+
+    // $('a.gear-photo-link').featherlight({
+    //     loading: '/assets/loading.gif'
+    // });
+    $('a.gear-photo-link').featherlight({
+        loading: '/assets/loading.gif'
     });
     
 });

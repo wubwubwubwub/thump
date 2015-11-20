@@ -30,6 +30,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'soundcloud'
 gem 'fog'
+gem 'featherlight'
 
 gem 'rails_12factor', group: :production
 

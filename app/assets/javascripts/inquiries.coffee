@@ -16,7 +16,7 @@ $(document).on "page:change", ->
     lat
     lon
   ], 13)
-
+  L.Icon.Default.imagePath = '/assets/leaflet/dist/images'
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
     maxZoom: 14

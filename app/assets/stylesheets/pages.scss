@@ -194,7 +194,7 @@
     width: 65%;
     text-align: center;
     color: #d0d0d0;
-    padding: 10px 0 0 12px;
+    padding: 16px 0 40px 12px;
     box-sizing: border-box;
     .gear-list-name {
       font-size: 30px;
@@ -205,7 +205,7 @@
     .gear-photo-link {
       transition: all .4s ease;
       &:hover {
-        color: yellow;
+        color: #ff5656;
       }
     }
     li {

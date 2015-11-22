@@ -19,8 +19,6 @@
 //= require_tree .
 
 $(document).ready(function(){
-    // var windowHeight = $(window).height();
-    // $(".picturewell").css({'height': windowHeight - 50 });
     $("#sent").hide();
     $("#error").hide();
 
@@ -37,16 +35,6 @@ $(document).ready(function(){
     if (window.location.pathname.split("/")[1] != "") {
         $("title").html(window.location.pathname.split("/")[1].toUpperCase() + " | Thump Recording");
     };
-
-    // $(".green").hide();
-    // $(".yellow").hide();
-    // $(".red").hide();
-    // $(".gear-list").find("a").filter(".gear-photo-link").each(functioin() {
-    //     $(this).on('click', function() {
-    //         event.preventDefault();
-    //     });
-    // });
-
     
     $(".gear-list").hide();
     
@@ -74,5 +62,9 @@ $(document).ready(function(){
     $('a.gear-photo-link').featherlight({
         loading: '/assets/loading.gif'
     });
+
+    var windowHeight = $(window).height() - 76;
+    $('.stool-pic').css("height", windowHeight);
+
     
 });

@@ -5,7 +5,7 @@
       img src="assets/thump_logo_b.png"
     .home-nav-links
       ul
-        li = link_to "Studio & Gear", studio_path
-        li = link_to "Sounds", sounds_path
-        li = link_to "Videos", videos_path
+        li = link_to "Studio & Gear", studio_path, 'data-no-turbolink' => true
+        li = link_to "Sounds", sounds_path, 'data-no-turbolink' => true
+        li = link_to "Videos", videos_path, 'data-no-turbolink' => true
         li = link_to "Contact Us", contact_path, 'data-no-turbolink' => true

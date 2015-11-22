@@ -19,8 +19,8 @@ $(document).on "page:change", ->
   L.Icon.Default.imagePath = '/assets/leaflet/dist/images'
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>'
-    maxZoom: 14
-    id: 'nolancamp.o7cl25hf'
+    maxZoom: 18
+    id: 'nolancamp.o7ci9dm7'
     accessToken: 'pk.eyJ1Ijoibm9sYW5jYW1wIiwiYSI6ImNpZ2poZ3I0OTAwNGR0dGx1MDlzM3Vqb3gifQ.wXiBFbtGd4LpdZG0J9MVWQ').addTo map
   L.marker([
     lat

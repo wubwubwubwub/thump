@@ -99,9 +99,9 @@
 
 .stool-pic {
   width: 100%;
-  min-height: 800px;
+  // min-height: 800px;
   // background: black url("thump_woods.jpg") top left no-repeat;
-  background: url("stool.jpg") top left no-repeat;
+  background: url("stool-pic.jpg") top left no-repeat;
   background-size: cover;
   z-index: -99999;
 }
@@ -140,7 +140,7 @@
   
   #gear-heading {
     font-size: 80px;
-    margin: 0px 0 50px;
+    margin: 50px 0;
   }
 }
 

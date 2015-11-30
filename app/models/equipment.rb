@@ -14,4 +14,6 @@ class Equipment < ActiveRecord::Base
   scope :EQ, -> {where(equipment_category_id: 7)}
   scope :amps, -> {where(equipment_category_id: 12)}
   scope :drums, -> {where(equipment_category_id: 13)}
+  scope :field, -> {where(field: true)}
+  scope :studio, -> {where(field: false)}
 end

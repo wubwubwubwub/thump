@@ -1,8 +1,14 @@
 .contact-well
-  #contact-heading Send an Email.
-  / .address
-  .map-box
-    div#map data-lon="#{longitude}" data-lat="#{latitude}"
+  #contact-heading Get in touch
+  .address
+    p Contact booking directly at <a href="mailto:booking@thumprecording.com">booking@thumprecording.com</a>
+    br
+    br
+    p Come visit our studio! - we're located at
+    br
+    br
+    p 295 Eckford St.
+    p Brooklyn, NY 11222
   .contact
     #contact_form
       == render 'form'
@@ -10,4 +16,5 @@
       p THE MESSAGE WAS SENT
     #error
       p Sorry there was an error. Please contact the studio manager directly at richardlevengood@gmail.com.
-
+  .map-box
+    div#map data-lon="#{longitude}" data-lat="#{latitude}"

@@ -10,9 +10,11 @@ body
   .wrapper
     header
       ul
-        li = link_to "Studio & Gear", studio_path
+        li = link_to "Studio", studio_path
+        li = link_to "Gear", gear_path, 'data-no-turbolink' => true
         li = link_to "Sounds", sounds_path
         span.logo: a href="/": img src="assets/thump_logo_b.png"
+        li = link_to "Field Gear", fieldrecording_path
         li = link_to "Videos", videos_path
         li = link_to "Contact Us", contact_path, 'data-no-turbolink' => true
 

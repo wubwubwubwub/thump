@@ -8,10 +8,13 @@ class PagesController < ApplicationController
 
   def studio
     @photos = GalleryImage.published.all
-    @categories = EquipmentCategory.includes(:equipment).all
   end
 
   def gear
-    @equipment = Equipment.includes(:equipment_category).all
+    @categories = EquipmentCategory.includes(:equipment).studio
+  end
+
+  def field
+    @categories = EquipmentCategory.includes(:equipment).field
   end
 end

@@ -1,10 +1,10 @@
-.gear-well
+.gear-well#field-well
   / #gear-heading That Gear Tho
   .gear-categories
     ul
       - @categories.each do |c|
         li.category-links: a.link href="#" data-category="#{c.name}" #{c.name}
-        .gear-list data-category="#{c.name}"
+        .gear-list#field data-category="#{c.name}"
           h2.gear-list-name = c.name
           ul
             - c.equipment.each do |e|
@@ -12,7 +12,7 @@
                 a.gear-photo-link href="#" data-featherlight="#{e.image_url(:medium)}" #{e.name}
               - else
                 li = e.name
-    .gear-container
+    .gear-container#field
       .welcome-container
         p Check out our collection
         img src="/assets/arrow.png"

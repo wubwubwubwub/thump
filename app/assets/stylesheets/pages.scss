@@ -110,9 +110,9 @@
   margin: 0;
   padding: 40px 5%;
   // background: rgba(#000, .7);
-  .fotorama {
+  text-align: center;
+  .fotorama__wrap {
     margin: 0 auto;
-    // width: 100%;
   }
 }
 
@@ -131,8 +131,12 @@
   }
 }
 
+#field-well {
+  min-height: 600px;
+}
+
 .gear-well {
-  margin:  0 0;
+  margin: 120px  0 0;
   min-height: 800px;
   // background: url("header_wood.jpg") top center no-repeat;
   color: white;
@@ -172,6 +176,10 @@
     text-decoration: none;
     color: #d0d0d0;
     font-size: 24px;
+  }
+  #field {
+    height: 500px;
+    max-height: 500px;
   }
   .gear-container {
     border: 1px solid black;
@@ -231,7 +239,7 @@
     background: none;
   }
   ::-webkit-scrollbar-thumb {
-    background: black;
+    background: #929192;
     border-radius: 10px;
   }
   

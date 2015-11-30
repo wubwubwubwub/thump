@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'contact', to: 'inquiries#new'
   get 'studio', to: 'pages#studio'
   get 'gear', to: 'pages#gear'
+  get 'fieldrecording', to: 'pages#field'
   
   root 'pages#home'
 

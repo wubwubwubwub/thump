@@ -121,10 +121,13 @@ html, body {
 
 footer, .push {
   height: 210px;
+  clear: both;
 }
 
 .push {
-  clear: both;
+  // position: fixed;
+  // bottom: 0;
+  // clear: both;
 }
 // ----------- end footer styles ----------- //
 
@@ -163,21 +166,23 @@ header {
     padding: 0 0;
 
     li {
-      display: inline;
-      padding: 0 50px;
-      font-size: 2.3em;
+      width: 168px;
+
+      display: inline-block;
+      // padding: 0 50px;
+      font-size: 2.2em;
       // vertical-align: middle;
       // border-bottom: 1px solid green;
-      &:nth-child(1) {
-        border-right: 1px solid #b0b0b0;
-      }
-      &:nth-child(4) {
-        border-right: 1px solid #b0b0b0;
+      border-right: 1px solid #b0b0b0;
+      &:nth-child(3) {
+        border: none;
+        margin-right: -12px;
       }
       &:last-child {
         border: none;
       }
       a {
+
         // color: #010101;
         color: #FF5656;
         text-decoration: none;
@@ -219,12 +224,11 @@ header {
 }
 
 footer {
-  clear: both;
   position: relative;
   bottom: 0;
   width: 100%;
   background: linear-gradient(to top, rgba(#4E4E4E, .7) 7%, rgba(#000, .8));
-  margin-top: 100px;
+  margin-top: 50px;
   padding-top: 30px;
   text-align: center;
   box-shadow: 0px -11px 100px rgba(152, 127, 72, 0.5);
@@ -260,6 +264,9 @@ footer {
         padding: 0 50px;
         &:first-child {
           padding-left: 0px;
+        }
+        &:last-child {
+          border: none;
         }
       }
       img {

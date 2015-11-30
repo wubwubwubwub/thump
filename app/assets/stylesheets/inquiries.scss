@@ -10,17 +10,27 @@
 }
 
 .contact-well {
+  margin: 0 auto;
   height: 800px;
   max-width: 1220px;
   position: relative;
   text-align: center;
-  padding: 0 10%;
-  .map-box {
+  padding: 0 8% 60px;
+  .address {
     float: left;
     width: 49%;
     max-width: 600px;
     height: 350px;
+    color: white;
+    padding-top: 40px;
+    p {
+      font-size: 3em;
     // border: 1px solid yellow;
+    }
+    a {
+      text-decoration: none;
+      color: #FA5F5D;
+    }
   }
   
   .contact {
@@ -36,7 +46,7 @@
 }
 
 .map-box {
-  // clear: both;
+  height: 340px;
 }
 
 

@@ -1,6 +1,6 @@
 ActiveAdmin.register Equipment do
 
-  permit_params :name, :equipment_category_id, :description, :image, :published
+  permit_params :name, :equipment_category_id, :description, :image, :published, :field
 
   action_item only: [:show, :edit] do
     link_to 'New Equipment', new_admin_equipment_path
@@ -14,6 +14,7 @@ ActiveAdmin.register Equipment do
   scope :EQ
   scope :amps
   scope :drums
+  scope :field
   
   index do
     selectable_column
@@ -30,6 +31,7 @@ ActiveAdmin.register Equipment do
     attributes_table do
       row :name
       row :published
+      row :field
       row :created_at
       row :equipment_category
       row :description
@@ -46,6 +48,7 @@ ActiveAdmin.register Equipment do
   form :html => { :multipart => true } do |f|
     f.inputs "Equipment" do
       f.input :equipment_category
+      f.input :field
       f.input :name
       f.input :description
       f.input :image, as: :file, :hint => f.object.image.present? \

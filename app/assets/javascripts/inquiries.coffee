@@ -28,18 +28,21 @@ $(document).on "page:change", ->
   ]).addTo(map).bindPopup(address).openPopup()
 
   $('#new_inquiry').submit ->
+    $('#contact_form').fadeOut()
+    $('#inquiry-loader').fadeIn()
     dataSet = $(this).serialize()
     $.ajax
       type: 'POST'
       url: $(this).attr('action')
       data: dataSet
       complete: ->
-        $('#contact_form').fadeOut()
-        $('#contact-heading').fadeOut()
+        # $('#contact-heading').fadeOut()
+        $('#inquiry-loader').fadeOut()
         $('#sent').fadeIn()
         return
       error: ->
-        $('#contact_form').fadeOut()
+        # $('#contact_form').fadeOut()
+        $('#inquiry-loader').fadeOut()
         $('#error').fadeIn()
         return
     false

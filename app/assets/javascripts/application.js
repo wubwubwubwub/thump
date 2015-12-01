@@ -18,26 +18,12 @@
 //= require fotorama
 //= require_tree .
 
-$(document).ready(function(){
-    $("#sent").hide();
-    $("#error").hide();
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-    // var doc = $(window).height();
-    // doc = doc - $("footer").height();
-    // $("section").css("min-height", doc);
+$(document).ready(function(){    
 
-    $("header").find("a").each(function() {
-        if ($(this).attr('href').split("/")[1] == window.location.pathname.split("/")[1]) {
-            $(this).addClass("current");
-        }
-    });
-
-    if (window.location.pathname.split("/")[1] != "") {
-        $("title").html(window.location.pathname.split("/")[1].toUpperCase() + " | Thump Recording");
-    };
-    
-    $(".gear-list").hide();
-    
     $(".gear-categories").find("a").filter(".link").each(function() {
         $(this).on('click', function() {
             event.preventDefault();
@@ -56,15 +42,25 @@ $(document).ready(function(){
         });
     });
 
-    // $('a.gear-photo-link').featherlight({
-    //     loading: '/assets/loading.gif'
-    // });
     $('a.gear-photo-link').featherlight({
         loading: '/assets/loading.gif'
     });
 
-    var windowHeight = $(window).height() - 76;
+    // to make stool pic exact height of window minus header
+    var windowHeight = $(window).height() - 84;
     $('.stool-pic').css("height", windowHeight);
 
-    
+});
+
+$(document).on("page:change", function() {
+
+    if (window.location.pathname.split("/")[1] != "") {
+        $("title").html("Thump | " + capitalizeFirstLetter(window.location.pathname.split("/")[1]));
+    };
+
+    $('header').find('a').each(function() {
+        if ($(this).attr('href').split('/')[1] === window.location.pathname.split('/')[1]) {
+            $(this).addClass('current');
+        }
+    });
 });

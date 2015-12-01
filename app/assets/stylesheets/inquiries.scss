@@ -17,6 +17,7 @@
   text-align: center;
   padding: 0 8% 60px;
   .address {
+    // font-family: 'PT Serif', serif;
     float: left;
     width: 49%;
     max-width: 600px;
@@ -68,6 +69,7 @@
   color: white;
   display: none;
   margin-top: 76px;
+  padding: 0 30px;
   a {
     text-decoration: none;
     color: #FA5F5D;
@@ -75,10 +77,10 @@
 }
 
 #inquiry-loader {
-  left: 40%;
+  left: 37%;
   img {
-    width: 100px;
-    margin-top: 70px;
+    width: 74px;
+    margin-top: 34px;
   }
 }
 
@@ -111,7 +113,7 @@
     }
     input[type="text"], input[type="email"], textarea {
       margin: 0;
-      font-family: 'Hallo Sans';
+      font-family: 'Open Sans Condensed';
       font-size: 18px;
       appearance: none;
       box-shadow: none;

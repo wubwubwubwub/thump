@@ -3,6 +3,11 @@ ActiveAdmin.register Video do
   permit_params :title, :description, :source_url, :published
 
   config.filters = false
+
+  action_item only: [:show, :edit] do
+    link_to 'New Video', new_admin_video_path
+  end
+
   
   index do
     column :title

@@ -4,7 +4,7 @@ ActiveAdmin.register Video do
 
   config.filters = false
 
-  action_item only: [:show, :edit] do
+  action_item only: [:show] do
     link_to 'New Video', new_admin_video_path
   end
 

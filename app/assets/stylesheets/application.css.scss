@@ -111,32 +111,78 @@ body {
 
 
 // ----------- sticky footer bottom of page ----------- // 
-html, body {
-  height: 100%;
-}
+// html, body {
+//   height: 100%;
+//   box-sizing: border-box;
+// }
+// *,
+// *:before,
+// *:after {
+//   box-sizing: inherit;
+// }
 
-.wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -210px;
-}
+// body {
+//   min-height: 100%;
+//   position: relative;
+// }
 
-footer, .push {
-  height: 210px;
+// .wrapper {
+//   // min-height: 100%;
+// //   height: auto !important;
+// //   // // height: 100%;
+// //   margin: 0 auto -210px;
+// }
+
+// // footer {
+// //   height: 210px;
+// //   clear: both;
+
+// // }
+
+// footer {
+//   position: relative;
+//   bottom: 0;
+//   right: 0;
+//   left: 0;
+//   height: 200px;
+//   //   // // position: absolute;
+// //   // // bottom: -120px;
+// }
+// .push {
+//   // // position: fixed;
+//   // // bottom: 0;
+//   clear: both;
+  
+//   height: 1px;
+// }
+.clear-fix {
   clear: both;
 }
 
-.push {
-  // position: fixed;
-  // bottom: 0;
-  // clear: both;
+
+* {
+	margin: 0;
 }
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -280px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+	height: 200px; /* .push must be the same height as .footer */
+}
+
+
+
 // ----------- end footer styles ----------- //
 
 
 section {
-  margin-top: 84px;
+  // margin-top: 84px;
 }
 
 
@@ -146,7 +192,7 @@ header {
   z-index: 1001;
 
   width: 100%;
-  position: fixed;
+  // position: fixed;
 
   text-align: center;
   padding: 8px 0 0;
@@ -227,11 +273,9 @@ header {
 }
 
 footer {
-  position: relative;
-  bottom: 0;
   width: 100%;
-  // background: linear-gradient(to top, rgba(#4E4E4E, .7) 7%, rgba(#000, .8));
-  background: black;
+  // background: linear-gradient(to top, rgba(#4E4E4E, .5), rgba(#000, .8) 40%);
+  background: rgba(#000, .8);
   margin-top: 50px;
   padding-top: 30px;
   text-align: center;
@@ -239,7 +283,7 @@ footer {
   p {
     text-align: center;
     margin: 0 auto;
-    padding: 10px 0 0 40px;
+    // padding: 10px 0 0 40px;
     color: #ccc;
     font-size: 16px;
     #nc-contact {
@@ -260,29 +304,25 @@ footer {
       margin-left: 0;
       list-style-type: none;
       li {
-
-        border-right: 1px solid #ccc;
-        display: inline;
-        width: 252px;
-        height: 100px;
-        padding: 0 50px;
+        color: #ccc;
+        font-size: 20px;
+        border-left: 1px solid #ccc;
+        display: inline-block;
+        height: 50px;
+        // padding: 10px 50px 0;
+        // box-sizing: border-box;
         &:first-child {
-          padding-left: 0px;
+          padding-top: 0px;
+          border: none;
         }
         &:last-child {
-          border: none;
+          // border: none;
         }
       }
       img {
         width: 250px;
       }
-      span {
-        display: inline;
-        // margin: 60px 60px 0;;
-        // float: right;
-        color: #ccc;
-        font-size: 20px;
-      }
+
       &:last-child {
         border: none;
       }
@@ -294,36 +334,60 @@ footer {
   color: #ccc;
 }
 
-// // ------------- Media Queries ------------- //
+// ------------- Media Queries ------------- //
 
-// @media only screen and (min-width: 1340px) {
-//   .siteContent {
-//     width: 1278px;
-//   }
+@media only screen and (min-width: 1340px) {
 
-// }
+}
 
-// @media only screen and (min-width: 1027px) and (max-width: 1339px) {
-//   .siteContent {
-//     width: 966px;
-//   }
-// }
+@media only screen and (min-width: 1027px) and (max-width: 1339px) {
+  header {
+    ul {
+      li {
+        width: 140px;
+      }
+    }
+  }
 
-// @media only screen and (min-width: 798px) and (max-width: 1026px) {
-//   .siteContent {
-//     width: 738px;
-//   }
-//   header {
-//     ul {
-//       li {
-//         padding: 0 30px;
-//       }
-//     }
-//   }
-// }
+  .push {
+    height: 180px;
+  }
 
-// @media only screen and (max-width: 797px) {
-//   .siteContent {
-//     width: 600px;
-//   }
-// }
+  .wrapper {
+	  margin: 0 auto -260px; /* the bottom margin is the negative value of the footer's height */
+  }
+  
+  footer {
+    height: 180px;
+    p {
+      margin-top: 36px;
+    }
+    .footer-img-container {
+      width: 90%;
+      ul {
+        margin-top: 40px;
+        li {
+          width: 280px;
+          height: 30px;
+          padding-top: 10px;
+          &:nth-child(2) {
+            padding: 10px 24px 0;
+            // padding: 0 0;
+            // margin-right: 30px;
+
+          }
+        }
+        img {
+          margin-top: -38px;
+          width: 200px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 798px) and (max-width: 1026px) {
+}
+
+@media only screen and (max-width: 797px) {
+}

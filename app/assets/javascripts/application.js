@@ -47,7 +47,7 @@ $(document).ready(function(){
     });
 
     // to make stool pic exact height of window minus header
-    var windowHeight = $(window).height() - 84;
+    var windowHeight = $(window).height();
     $('.stool-pic').css("height", windowHeight);
 
 });

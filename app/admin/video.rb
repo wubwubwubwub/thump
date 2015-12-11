@@ -8,8 +8,23 @@ ActiveAdmin.register Video do
     link_to 'New Video', new_admin_video_path
   end
 
+  batch_action :toggle_published_on do |ids|
+    batch_action_collection.find(ids).each do |r|
+      if !r.published
+        r.published = true
+        r.save!
+      else
+        r.published = false
+        r.save!
+      end
+    end
+    redirect_to admin_videos_path, alert: "The selections have been toggled"
+  end
+      
+  
   
   index do
+    selectable_column
     column :title
     # column :description
     column :source_url

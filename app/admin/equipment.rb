@@ -6,6 +6,20 @@ ActiveAdmin.register Equipment do
     link_to 'New Equipment', new_admin_equipment_path
   end
 
+  batch_action :toggle_published_on do |ids|
+    batch_action_collection.find(ids).each do |r|
+      if !r.published
+        r.published = true
+        r.save!
+      else
+        r.published = false
+        r.save!
+      end
+    end
+    redirect_to admin_equipment_index_path, alert: "The selections have been toggled"
+  end
+
+  
   scope :all
   scope :microphones
   scope :outboard_pres

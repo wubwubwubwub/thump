@@ -4,6 +4,7 @@ class Equipment < ActiveRecord::Base
   belongs_to :equipment_category, counter_cache: true
 
   validates :name, presence: true
+  validates :name, uniqueness: :true
   validates :equipment_category, presence: true
 
   scope :microphones, -> {where(equipment_category_id: 1)}

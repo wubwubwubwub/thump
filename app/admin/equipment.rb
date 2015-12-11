@@ -18,6 +18,7 @@ ActiveAdmin.register Equipment do
   
   index do
     selectable_column
+    column :equipment_category
     column :name
     column :published
     column "Image Uploaded?", :sortable => :image do |i|

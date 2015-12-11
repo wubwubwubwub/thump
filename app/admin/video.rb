@@ -1,7 +1,9 @@
 ActiveAdmin.register Video do
 
   permit_params :title, :description, :source_url, :published
-
+  
+  menu priority: 4
+  
   config.filters = false
 
   action_item only: [:show] do

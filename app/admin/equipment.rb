@@ -2,6 +2,8 @@ ActiveAdmin.register Equipment do
 
   permit_params :name, :equipment_category_id, :description, :image, :published, :field
 
+  menu priority: 1
+  
   action_item only: [:show, :edit] do
     link_to 'New Equipment', new_admin_equipment_path
   end

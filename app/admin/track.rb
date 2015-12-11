@@ -2,6 +2,8 @@ ActiveAdmin.register Track do
 
   permit_params :name, :artist, :soundcloud_url, :published, :description
 
+  menu priority: 2
+  
   config.filters = false
   
   batch_action :toggle_published_on do |ids|

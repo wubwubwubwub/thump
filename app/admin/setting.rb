@@ -2,6 +2,8 @@ ActiveAdmin.register Setting do
 
   permit_params :longitude, :latitude
 
+  menu parent: "Admin"
+  
   config.filters = false
   config.batch_actions = false
   config.clear_action_items!

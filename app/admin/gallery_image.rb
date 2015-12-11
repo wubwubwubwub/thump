@@ -2,6 +2,8 @@ ActiveAdmin.register GalleryImage do
 
   permit_params :name, :image, :published
 
+  menu priority: 3
+  
   config.filters = false
   
   batch_action :toggle_published_on do |ids|

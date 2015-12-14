@@ -2,7 +2,7 @@ ActiveAdmin.register GalleryImage do
 
   permit_params :name, :image, :published
 
-  menu priority: 3
+  menu priority: 4
   
   config.filters = false
   

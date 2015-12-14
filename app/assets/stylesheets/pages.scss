@@ -97,13 +97,28 @@
 //   padding-top: 5px !important;
 // }
 
-.stool-pic {
+.profiled-pic {
   width: 100%;
-  max-height: 1000px;
-  // background: black url("thump_woods.jpg") top left no-repeat;
-  background: url("stool-pic.jpg") top left no-repeat;
-  background-size: cover;
+  min-height: 200px;
+  max-height: 800px;
   z-index: -99999;
+}
+#stool {
+  background: url("studio_page/stool.jpg") top left no-repeat;
+  background-size: cover;
+}
+#light {
+  background: url("studio_page/light.jpg") top left no-repeat;
+  background-size: cover;
+}
+#meter {
+  background: url("studio_page/meter.jpg") top left no-repeat;
+  background-size: cover;
+}
+#piano {
+  background: url("studio_page/piano.jpg") top left no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
 }
 
 .picture-well {
@@ -119,7 +134,7 @@
 
 .blurb {
   // display: none;
-  margin: -200px 0 130px;
+  margin: -200px 0 80px;
   background: rgba(#000, .8);
   // background-size: fit;
   height: 120px;
@@ -132,27 +147,80 @@
 }
 
 #field-well {
-  min-height: 940px;
+  min-height: 640px;
+  margin-top: 0;
+  .field-pic {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    background: url("field-photo.jpeg") center center no-repeat;
+    background-size: cover;
+    .field-blurb-top {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      color: black;
+      font-size: 38px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 32px;
+      p {
+        padding: 0 50px;
+      }
+    }
+  }
+}
+
+#gear-heading {
+  // font-family: 'PT Serif', serif;
+  color: #fefefe;
+  // color: #ff5656;
+  font-size: 40px;
+  margin: 70px 0;
+  padding: 0 10%;
+  p:last-child {
+    margin-top: 30px;
+    font-size: 36px;
+  }
 }
 
 .gear-well {
-  margin: 0px 0 0;
-  min-height: 940px;
+  margin: 0;
+  min-height: 1460px;
+  // height: 100%;
   // background: url("header_wood.jpg") top center no-repeat;
   color: white;
   text-align: center;
-  
-  #gear-heading {
-    font-family: 'PT Serif', serif;
-    color: #b0b0b0;
-    font-size: 40px;
-    margin: 70px 0;
-    padding: 0 10%;
+  // background: url("studio-photo.jpg") center center no-repeat;
+  background-size: cover;
+  .studio-pic {
+    position: relative;
+    min-height: 600px;
+    max-height: 600px;
+    width: 100%;
+    background: url("studio-photo.jpg") center center no-repeat;
+    background-size: cover;
+    margin-bottom: 40px;
+    .studio-blurb-bottom {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      text-align: right;
+      margin-bottom: 32px;
+      p {
+        padding: 0 50px;
+        color: white;
+        font-size: 42px;
+        font-weight: bold;
+        line-height: 1.3em;
+      }
+    }
   }
 }
 
 .gear-categories {
   // border: 1px solid yellow;
+  min-height: 600px;
   width: 960px;
   margin: 0 auto;
   position: relative;
@@ -202,9 +270,9 @@
         margin: 0 auto;
         width: 80%;
         margin-top: 100px;
-        margin-bottom: 40px;
-        color: #ff5656;
-        font-size: 50px;
+        margin-bottom: 40px; 
+        color: #53B3BD;
+        font-size: 36px;
       }
     }
   }

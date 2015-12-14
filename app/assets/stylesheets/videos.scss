@@ -7,7 +7,7 @@
   color: #b0b0b0;
   text-align: center;
   font-size: 3em;
-  padding: 50px 200px 60px;
+  padding: 50px 200px 40px;
 }
 
 .video {
@@ -15,10 +15,14 @@
 }
 
 .video-list {
+  margin-top: 60px;
   width: 100%;
   text-align: center;
   .centering-container {
     margin: 0 auto;
+  }
+  .video-div {
+    margin-bottom: 50px;
   }
   // margin-bottom: 500px;
 }

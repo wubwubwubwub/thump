@@ -32,6 +32,9 @@ gem 'soundcloud'
 gem 'fog'
 gem 'featherlight'
 
+gem 'acts_as_list'
+gem 'activeadmin-sortable'
+
 gem 'rails_12factor', group: :production
 
 group :development do

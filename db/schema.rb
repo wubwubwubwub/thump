@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151124171151) do
+ActiveRecord::Schema.define(version: 20151215011127) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 20151124171151) do
     t.string   "image"
     t.boolean  "published",             default: true
     t.boolean  "field",                 default: false
+    t.integer  "position"
   end
 
   create_table "equipment_categories", force: :cascade do |t|
@@ -75,6 +76,7 @@ ActiveRecord::Schema.define(version: 20151124171151) do
     t.integer  "equipment_count"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "position"
   end
 
   create_table "gallery_images", force: :cascade do |t|
@@ -96,9 +98,9 @@ ActiveRecord::Schema.define(version: 20151124171151) do
 
   create_table "settings", force: :cascade do |t|
     t.string   "latitude"
+    t.string   "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "longitude"
   end
 
   create_table "tracks", force: :cascade do |t|

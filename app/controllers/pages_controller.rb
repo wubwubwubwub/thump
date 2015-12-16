@@ -11,10 +11,10 @@ class PagesController < ApplicationController
   end
 
   def gear
-    @categories = EquipmentCategory.includes(:equipment).studio.order('equipment_categories.name, equipment.name ASC')
+    @categories = EquipmentCategory.includes(:equipment).order(position: :asc).studio
   end
 
   def field
-    @categories = EquipmentCategory.includes(:equipment).field.order('equipment_categories.name, equipment.name ASC')
+    @categories = EquipmentCategory.includes(:equipment).order(position: :asc).field
   end
 end

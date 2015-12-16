@@ -1,8 +1,13 @@
 ActiveAdmin.register Equipment do
 
-  permit_params :name, :equipment_category_id, :description, :image, :published, :field
+  permit_params :name, :equipment_category_id, :description, :image, :published, :field, :position
 
   menu priority: 1
+
+  config.sort_order = "position_asc"
+  config.paginate = false
+
+  sortable
   
   action_item only: [:show, :edit] do
     link_to 'New Equipment', new_admin_equipment_path
@@ -31,9 +36,14 @@ ActiveAdmin.register Equipment do
   scope :amps
   scope :drums
   scope :field
+
+  # config.filters = false
   
   index do
-    selectable_column
+    sortable_handle_column
+    column :position
+    column :id
+    # selectable_column
     column :equipment_category
     column :name
     column :published
@@ -46,7 +56,9 @@ ActiveAdmin.register Equipment do
 
   show :html => { :multipart => true } do
     attributes_table do
+      row :id
       row :name
+      row :position
       row :published
       row :field
       row :created_at
@@ -66,6 +78,7 @@ ActiveAdmin.register Equipment do
     f.inputs "Equipment" do
       f.input :equipment_category
       f.input :field
+      f.input :position
       f.input :name
       f.input :description
       f.input :image, as: :file, :hint => f.object.image.present? \

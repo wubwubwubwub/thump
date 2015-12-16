@@ -111,61 +111,19 @@ body {
 
 
 // ----------- sticky footer bottom of page ----------- // 
-// html, body {
-//   height: 100%;
-//   box-sizing: border-box;
-// }
-// *,
-// *:before,
-// *:after {
-//   box-sizing: inherit;
-// }
 
-// body {
-//   min-height: 100%;
-//   position: relative;
-// }
-
-// .wrapper {
-//   // min-height: 100%;
-// //   height: auto !important;
-// //   // // height: 100%;
-// //   margin: 0 auto -210px;
-// }
-
-// // footer {
-// //   height: 210px;
-// //   clear: both;
-
-// // }
-
-// footer {
-//   position: relative;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   height: 200px;
-//   //   // // position: absolute;
-// //   // // bottom: -120px;
-// }
-// .push {
-//   // // position: fixed;
-//   // // bottom: 0;
-//   clear: both;
-  
-//   height: 1px;
-// }
 .clear-fix {
   clear: both;
 }
 
-
 * {
 	margin: 0;
 }
+
 html, body {
 	height: 100%;
 }
+
 .wrapper {
 	min-height: 100%;
 	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
@@ -175,8 +133,6 @@ html, body {
 footer, .push {
 	height: 200px; /* .push must be the same height as .footer */
 }
-
-
 
 // ----------- end footer styles ----------- //
 
@@ -337,7 +293,41 @@ footer {
 // ------------- Media Queries ------------- //
 
 @media only screen and (min-width: 1340px) {
+.push {
+    height: 180px;
+  }
 
+  .wrapper {
+	  margin: 0 auto -260px; /* the bottom margin is the negative value of the footer's height */
+  }
+  
+  footer {
+    height: 180px;
+    p {
+      margin-top: 36px;
+    }
+    .footer-img-container {
+      width: 90%;
+      ul {
+        margin-top: 40px;
+        li {
+          width: 280px;
+          height: 30px;
+          padding-top: 10px;
+          &:nth-child(2) {
+            padding: 10px 24px 0;
+            // padding: 0 0;
+            // margin-right: 30px;
+
+          }
+        }
+        img {
+          margin-top: -38px;
+          width: 200px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: 1027px) and (max-width: 1339px) {
@@ -386,7 +376,42 @@ footer {
   }
 }
 
-@media only screen and (min-width: 798px) and (max-width: 1026px) {
+@media only screen and (min-width: 798px) and (max-width: 1026px) {  
+  .push {
+    height: 180px;
+  }
+  
+  .wrapper {
+	  margin: 0 auto -260px; /* the bottom margin is the negative value of the footer's height */
+  }
+  
+  footer {
+    height: 180px;
+    p {
+      margin-top: 36px;
+    }
+    .footer-img-container {
+      width: 90%;
+      ul {
+        margin-top: 40px;
+        li {
+          width: 280px;
+          height: 30px;
+          padding-top: 10px;
+          &:nth-child(2) {
+            padding: 10px 24px 0;
+            // padding: 0 0;
+            // margin-right: 30px;
+
+          }
+        }
+        img {
+          margin-top: -38px;
+          width: 200px;
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 797px) {

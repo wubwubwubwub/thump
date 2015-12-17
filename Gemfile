@@ -36,6 +36,8 @@ gem 'acts_as_list'
 gem 'activeadmin-sortable'
 
 gem 'rails_12factor', group: :production
+gem 'newrelic_rpm'
+
 
 group :development do
   gem 'meta_request'

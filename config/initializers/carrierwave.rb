@@ -23,6 +23,7 @@ CarrierWave.configure do |config|
     # config.enable_processing = false
     config.root = "#{Rails.root}/tmp"
   else
+    config.asset_host = ENV['FOG_CDN']
     config.storage = :fog
   end
  

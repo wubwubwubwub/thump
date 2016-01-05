@@ -5,7 +5,7 @@
 $(document).on "page:change", ->
   
   $('.gear-categories').find('a').filter('.link').each ->
-    $(this).on 'click', ->
+    $(this).on 'click', (event)->
       event.preventDefault()
       # $(".welcome-container").fadeOut();
       $('.gear-categories').find('.link').css 'color', '#d0d0d0'
